@@ -1,0 +1,10 @@
+language: erlang
+notifications:
+  email:
+    - hirotnky@yahoo.com
+otp_release:
+  - R16B
+  - R15B03
+  - R15B01
+script: "rebar eunit suite=sunaba_test"
+

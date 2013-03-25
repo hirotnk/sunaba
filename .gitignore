@@ -1,0 +1,10 @@
+ebin/
+rel/
+cover_report/
+test/*.beam
+test/*.log
+
+.eunit
+
+*.swp
+*.swo

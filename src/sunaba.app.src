@@ -1,0 +1,13 @@
+{application, sunaba,
+ [
+  {description, "My SandBox"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { sunaba, []}},
+  {env, []},
+  {modules,[sunaba,sunaba_sup,sunaba_server]}
+ ]}.
