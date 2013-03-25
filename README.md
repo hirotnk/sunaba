@@ -2,5 +2,5 @@
 
 sunaba
 ====
-This is my play ground. It means sandbox in Japanese.
+This is my play ground. 'sunaba' means sandbox in Japanese.
 
