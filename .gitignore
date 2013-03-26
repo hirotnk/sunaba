@@ -3,6 +3,10 @@ rel/
 cover_report/
 test/*.beam
 test/*.log
+doc/*.html
+doc/*.css
+doc/*.png
+doc/edoc-info
 
 .eunit
 

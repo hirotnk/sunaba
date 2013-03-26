@@ -147,6 +147,6 @@ hello_test_() ->
        ?assertEqual(Output,
                     sunaba_server:hello ("Erlang"))
      end}
-   ].
+   ]}.
 
 -endif.
