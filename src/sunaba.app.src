@@ -8,6 +8,10 @@
                   stdlib
                  ]},
   {mod, { sunaba, []}},
-  {env, []},
+  {env, [
+          {sunaba_fib_min_pool_size,5},
+          {sunaba_fib_max_pool_size,30}
+        ]},
   {modules,[sunaba,sunaba_sup,sunaba_server]}
  ]}.
+

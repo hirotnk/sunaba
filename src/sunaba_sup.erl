@@ -25,5 +25,8 @@ start_link() ->
 
 init([]) ->
   io:format ("starting sunaba_sup~n",[]),
-  {ok, { {one_for_one, 5, 10}, [?CHILD (sunaba_server, worker)]} }.
+  {ok, { {one_for_one, 5, 10}, [
+                                ?CHILD (sunaba_server, worker),
+                                ?CHILD (sunaba_fib_pool, worker)
+                               ]} }.
 
