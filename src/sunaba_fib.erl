@@ -30,7 +30,7 @@ get_fib(N) ->
 %% @end
 %%--------------------------------------------------------------------
 start_link() ->
-    gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
+  gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 
 %%%===================================================================
 %%% gen_server callbacks
@@ -48,8 +48,8 @@ start_link() ->
 %% @end
 %%--------------------------------------------------------------------
 init([]) ->
-    io:format ("sunaba init~n",[]),
-    {ok, #state{}}.
+  io:format ("sunaba init:~p~n",[self()]),
+  {ok, #state{}}.
 
 %%--------------------------------------------------------------------
 %% @private
@@ -66,6 +66,11 @@ init([]) ->
 %% @end
 %%--------------------------------------------------------------------
 handle_call({get_fib,N}, _From, State) ->
+    T1 = os:timestamp (),
+    Fib = fib (N),
+    Micros = timer:now_diff (os:timestamp (), T1),
+    io:format ("process:~p ~Bth fib:~p elapsed:~B ms~n",
+               [self (), N, Fib, Micros div 1000]),
     {reply, fib (N), State};
 handle_call(_Request, _From, State) ->
     Reply = ok,

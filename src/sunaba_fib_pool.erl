@@ -16,7 +16,9 @@ start_link () ->
                { idle_timeout, 60 },
                { max_queue, 20 },
                { prog_id, ?APP },
-               { pool_id, ?MODULE } ],
+               { pool_id, ?MODULE },
+               { stats, false }
+             ],
   gen_server_pool:start_link ( { local, ?MODULE },
                                 sunaba_fib, [], [], PoolOpts ).
 
